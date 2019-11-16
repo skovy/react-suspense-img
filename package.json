@@ -7,6 +7,13 @@
   "main": "dist/index.js",
   "module": "dist/react-suspense-img.esm.js",
   "typings": "dist/index.d.ts",
+  "keywords": [
+    "react",
+    "suspense",
+    "concurrent mode",
+    "image",
+    "resource"
+  ],
   "files": [
     "dist"
   ],
