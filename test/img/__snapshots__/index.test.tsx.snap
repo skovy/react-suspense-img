@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Img /> passes through all standard image attributes 1`] = `"<img alt=\\"kitten\\" width=\\"64\\" title=\\"A kitten\\" src=\\"https://placekitten.com/12/34\\">"`;
+
+exports[`<Img /> suspends while loading the image 1`] = `"<img src=\\"https://placekitten.com/12/34\\">"`;
+
+exports[`<Img /> throws an error if there was an issue loading the image 1`] = `"<h1>Something went wrong.</h1>"`;
