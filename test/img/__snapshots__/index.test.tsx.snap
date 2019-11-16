@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Img /> passes through all standard image attributes 1`] = `"<img alt=\\"kitten\\" width=\\"64\\" title=\\"A kitten\\" src=\\"https://placekitten.com/12/34\\">"`;
+exports[`<Img /> passes through all standard image attributes 1`] = `"<img width=\\"64\\" title=\\"A kitten\\" alt=\\"kitten\\" src=\\"https://placekitten.com/12/34\\">"`;
 
 exports[`<Img /> suspends while loading the image 1`] = `"<img src=\\"https://placekitten.com/12/34\\">"`;
 
