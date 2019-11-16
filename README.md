@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/react-suspense-img.svg)](https://badge.fury.io/js/react-suspense-img)
+
 **️⚠️ Please note this package relies on experimental React features that are not yet available in a stable release. By definition, this means this package is also experimental. See [the React documentation on current mode for more details](https://reactjs.org/docs/concurrent-mode-intro.html).**
 
 # 🖼 react-suspense-img
@@ -5,6 +7,12 @@
 A simple React image component that suspends while loading.
 
 ## Usage
+
+Install the package.
+
+```bash
+yarn add react-suspense-img
+```
 
 Import the `Img` component and image `resource` cache.
 
