@@ -1,5 +1,6 @@
 {
   "name": "react-suspense-img",
+  "description": "A simple React image component that suspends while loading",
   "version": "0.1.0",
   "license": "MIT",
   "author": "Spencer Miskoviak",
@@ -30,14 +31,18 @@
     "trailingComma": "es5"
   },
   "devDependencies": {
+    "@types/invariant": "^2.2.30",
     "@types/jest": "^24.0.23",
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
     "husky": "^3.0.9",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
+    "react": "^0.0.0-experimental-b53ea6ca0",
+    "react-dom": "^0.0.0-experimental-b53ea6ca0",
     "tsdx": "^0.11.0",
     "tslib": "^1.10.0",
     "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "invariant": "^2.2.4"
   }
 }
