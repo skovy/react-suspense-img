@@ -35,6 +35,38 @@ const Component = () => (
 );
 ```
 
+Want to see examples of what this could look like? See some of
+[the examples here](https://react-suspense-img.netlify.com/).
+
+## API
+
+### `<Img />`
+
+A small component that wraps `img` but suspends while the image is loading.
+
+#### Props
+
+- `src`: the only required prop, the image source to display.
+- `...`: all of the standard image props, for example `alt`, `className`, etc.
+
+### `resource`
+
+The image resource to cache images and determine if a given image has loaded
+or if it needs to suspend.
+
+#### Methods
+
+- `preloadImage(src: string)`: preload the given source image. This is the only
+  method that is necessary to use. This should be called before using the given
+  `src` with the `Img` component to follow the
+  [render-as-you-fetch pattern](https://reactjs.org/docs/concurrent-mode-suspense.html#approach-3-render-as-you-fetch-using-suspense).
+- `read(src: string)`: read a given source from the cache. If it has not loaded
+  it will throw a promise. If it has errored it will throw an error. If it has
+  loaded it will return the source. This method is used within the `Img`
+  component and should never need to be called directly.
+- `clear()`: clear the entire image resource cache. This may be useful for
+  running between tests to always start with an empty cache.
+
 ## Credit
 
 - Built with [TSDX](https://github.com/jaredpalmer/tsdx).
