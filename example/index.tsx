@@ -6,6 +6,7 @@ import { Basic } from './components/basic';
 import { Backwards } from './components/backwards';
 import { Together } from './components/together';
 import { Legacy } from './components/legacy';
+import { Transition } from './components/transition';
 
 const App = () => (
   <div className="main-content">
@@ -22,7 +23,8 @@ const App = () => (
     <p>
       If you're on a fast network connection it may be ideal to throttle your
       network speed to make the differences between the following examples more
-      pronounced.
+      pronounced. In Chrome, open the developer tools, go to the "Network" tab
+      and select "Slow 3G."
     </p>
     <p>
       All of this code is available in the <code>example</code> directory{' '}
@@ -33,8 +35,9 @@ const App = () => (
     </p>
     <Legacy />
     <Basic />
-    <Together />
     <Backwards />
+    <Together />
+    <Transition />
   </div>
 );
 

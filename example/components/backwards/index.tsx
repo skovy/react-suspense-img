@@ -15,14 +15,15 @@ const Backwards = () => {
 
   return (
     <div className="section">
-      <h2>Concurrent Example: Backwards</h2>
+      <h2>Suspense List Example: Backwards</h2>
       <p>
         This is an example of loading images with a <code>revealOrder</code> of{' '}
         <code>backwards</code>.
       </p>
       <p>
-        Notice when they are reloaded that the images one-by-one. The last
-        element is loaded first, then the second last, etc.
+        Notice when they are reloaded that the images are revealed one-by-one.
+        But this time the last element is loaded first, then the second to last,
+        etc. In this case, this will effectively be right-to-left.
       </p>
       {button}
       <ErrorBoundary>

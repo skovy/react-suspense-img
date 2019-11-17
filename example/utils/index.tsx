@@ -27,7 +27,7 @@ const generateRandomImages = (count: number): string[] => {
 const useImages = (count: number) => {
   const [images, setImages] = React.useState(generateRandomImages(count));
   const [startTransition, isPending] = React.useTransition({
-    timeoutMs: 3000,
+    timeoutMs: 2000,
   });
 
   const reload = () => {

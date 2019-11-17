@@ -8,20 +8,19 @@ const Basic = () => {
   const { images, button } = useImages(10);
   return (
     <div className="section">
-      <h2>Concurrent Example</h2>
+      <h2>Suspense List Example: Forwards</h2>
       <p>
         This is a basic example of loading images with React Suspense and
         Concurrent Mode. Each <code>Img</code> component is wrapped in its own{' '}
         <code>React.Suspense</code> with its own <code>fallback</code>. This
         entire list is then wrapped in <code>React.SuspenseList</code> with a{' '}
         <code>revealOrder</code> of <code>forwards</code> and a{' '}
-        <code>tail</code>
-        value of <code>collapsed</code>
+        <code>tail</code> value of <code>collapsed</code>.
       </p>
       <p>
         Notice when they are reloaded that the images are revealed forwards (not
         randomly or in any other order) and only one fallback indicator is shown
-        at a time and the rest are collapsed.
+        at a time and the rest are "collapsed."
       </p>
       {button}
       <ErrorBoundary>

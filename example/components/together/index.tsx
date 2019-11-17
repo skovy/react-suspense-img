@@ -6,16 +6,17 @@ import { ErrorBoundary } from '../error-boundary';
 
 const Together = () => {
   const { images, button } = useImages(10);
+
   return (
     <div className="section">
-      <h2>Concurrent Example: Together</h2>
+      <h2>Suspense List Example: Together</h2>
       <p>
         This is an example of loading images with a <code>revealOrder</code> of{' '}
         <code>together</code> with the same <code>fallback</code> as above.
       </p>
       <p>
         Notice when they are reloaded that the images are revealed all at once.
-        They are no revealed randomly or one-by-one in a certain direction.
+        They are not revealed randomly nor one-by-one in either direction.
       </p>
       {button}
       <ErrorBoundary>

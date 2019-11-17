@@ -6,6 +6,12 @@ body {
   font-size: 16px;
 }
 
+@media only screen and (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+}
+
 p {
   margin-bottom: 16px;
 }
@@ -57,7 +63,7 @@ button:focus {
 .section {
   margin: 64px 0 0;
   padding: 64px 0 0;
-  border-top: 8px dotted #BBB8B2;
+  border-top: 8px dotted #bbb8b2;
 }
 
 .error {
@@ -76,6 +82,14 @@ button:focus {
   display: inline-block;
   width: 64px;
   height: 64px;
-  box-sizing: border-box;
-  background-color: #BBB8B2;
+  background-color: #bbb8b2;
+}
+
+.all-images-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 64px;
+  background-color: #bbb8b2;
 }
