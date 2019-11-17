@@ -45,4 +45,55 @@ const useImages = (count: number) => {
   return { images, button };
 };
 
-export { useImages };
+// Suspense integrations like Relay implement
+// a contract like this to integrate with React.
+// Real implementations can be significantly more complex.
+// Don't copy-paste this into your project!
+const wrapPromise = (promise: Promise<{}>) => {
+  let status = 'pending';
+  let result;
+  let suspender = promise.then(
+    r => {
+      status = 'success';
+      result = r;
+    },
+    e => {
+      status = 'error';
+      result = e;
+    }
+  );
+  return {
+    read() {
+      if (status === 'pending') {
+        throw suspender;
+      } else if (status === 'error') {
+        throw result;
+      } else if (status === 'success') {
+        return result;
+      }
+    },
+  };
+};
+
+const NAMES = ['Jill', 'James', 'Jane', 'Joe'];
+let index = 0;
+
+const fetchUser = () => {
+  index = index % NAMES.length;
+
+  return wrapPromise(
+    new Promise(resolve => {
+      setTimeout(() => {
+        // Pick a random width between 100 and 200 for a variety of kittens.
+        const width = Math.floor(Math.random() * 100 + 100);
+
+        resolve({
+          name: NAMES[index++],
+          avatarUrl: `https://placekitten.com/${width}/200?timestamp=${Date.now()}`,
+        });
+      }, 2000);
+    })
+  );
+};
+
+export { useImages, fetchUser };

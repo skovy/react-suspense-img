@@ -4,9 +4,11 @@ import * as ReactDOM from 'react-dom';
 
 import { Basic } from './components/basic';
 import { Backwards } from './components/backwards';
-import { Together } from './components/together';
 import { Legacy } from './components/legacy';
+import { NormalImg } from './components/normal-img';
+import { SuspenseImg } from './components/suspense-img';
 import { Transition } from './components/transition';
+import { Together } from './components/together';
 
 const App = () => (
   <div className="main-content">
@@ -38,6 +40,8 @@ const App = () => (
     <Backwards />
     <Together />
     <Transition />
+    <NormalImg />
+    <SuspenseImg />
     <a
       href="https://github.com/skovy/react-suspense-img"
       className="github-corner"
