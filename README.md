@@ -1,4 +1,5 @@
-[![npm version](https://badge.fury.io/js/react-suspense-img.svg)](https://badge.fury.io/js/react-suspense-img)
+![npm version](https://img.shields.io/npm/v/react-suspense-img)
+[![Build Status](https://travis-ci.org/skovy/react-suspense-img.svg?branch=master)](https://travis-ci.org/skovy/react-suspense-img)
 
 **️⚠️ Please note this package relies on experimental React features that are not yet available in a stable release. By definition, this means this package is also experimental. See [the React documentation on current mode for more details](https://reactjs.org/docs/concurrent-mode-intro.html).**
 
