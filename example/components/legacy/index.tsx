@@ -13,9 +13,7 @@ const Legacy = () => {
         Suspense and Concurrent Mode.
       </p>
       <p>
-        The <code>height</code> and <code>width</code> of the following images
-        are fixed. If they weren't, whenever you would click reload the whole
-        page's content would adjust as the images are loaded.
+        Notice when they are reloaded that they will pop in randomly.
       </p>
       {button}
       {images.map(src => (

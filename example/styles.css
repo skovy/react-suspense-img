@@ -36,6 +36,24 @@ img {
   object-fit: cover;
 }
 
+button {
+  display: block;
+  margin-bottom: 16px;
+  padding: 8px 12px;
+  color: #f34213;
+  background: transparent;
+  border: 2px solid #f34213;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 150ms ease, border-color 150ms ease;
+}
+
+button:hover,
+button:focus {
+  color: #de9151;
+  border-color: #de9151;
+}
+
 .section {
   margin: 64px 0 0;
   padding: 64px 0 0;
@@ -54,20 +72,10 @@ img {
   padding: 24px;
 }
 
-.reload-button {
-  display: block;
-  margin-bottom: 16px;
-  padding: 8px 12px;
-  color: #f34213;
-  background: transparent;
-  border: 2px solid #f34213;
-  font-size: 16px;
-  cursor: pointer;
-  transition: color 150ms ease, border-color 150ms ease;
-}
-
-.reload-button:hover,
-.reload-button:focus {
-  color: #de9151;
-  border-color: #de9151;
+.image-fallback {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  box-sizing: border-box;
+  background-color: #BBB8B2;
 }
